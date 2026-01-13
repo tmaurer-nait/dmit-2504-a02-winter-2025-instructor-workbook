@@ -1,0 +1,172 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "pK-aRfwMfmHGYYr6RRdUj",
+      "type": "text",
+      "x": 92.65789031982422,
+      "y": 100.11146545410156,
+      "width": 421.1397399902344,
+      "height": 100,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a0",
+      "roundness": null,
+      "seed": 1142102788,
+      "version": 124,
+      "versionNonce": 1339866300,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1768342873890,
+      "link": null,
+      "locked": false,
+      "text": "CHANGE COUNTER\n1. Prompt the user for all their coin counts\n2. Validate user input\n3. Total up change value",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "CHANGE COUNTER\n1. Prompt the user for all their coin counts\n2. Validate user input\n3. Total up change value",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "j_VA2TKarQ454OBieNOfc",
+      "type": "text",
+      "x": 670.269416809082,
+      "y": 102.24515151977539,
+      "width": 315.4997863769531,
+      "height": 300,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a2",
+      "roundness": null,
+      "seed": 825206844,
+      "version": 205,
+      "versionNonce": 1124086076,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1768343088516,
+      "link": null,
+      "locked": false,
+      "text": "Option 1: \nStore the counts in a dictionary\n\nOption 2:\nStore in a bunch of variables\n\nOption 3:\nNot store at all\n\nOption 4:\nStore in list\n(sort it by face value)",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Option 1: \nStore the counts in a dictionary\n\nOption 2:\nStore in a bunch of variables\n\nOption 3:\nNot store at all\n\nOption 4:\nStore in list\n(sort it by face value)",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "wO3Iyb6aYAZ0Pv1KqI-v1",
+      "type": "freedraw",
+      "x": 652.5177630469909,
+      "y": 330.4562963967978,
+      "width": 106.41387939453125,
+      "height": 36.168975830078125,
+      "angle": 0,
+      "strokeColor": "#2f9e44",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a3",
+      "roundness": null,
+      "seed": 1232057148,
+      "version": 13,
+      "versionNonce": 1788443524,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1768343145166,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          4.6048990885417425,
+          7.891031901041629
+        ],
+        [
+          8.6236572265625,
+          15.928599039713504
+        ],
+        [
+          13.982035319010492,
+          22.62654622395837
+        ],
+        [
+          15.321553548177235,
+          23.96616617838538
+        ],
+        [
+          16.661173502604242,
+          23.96616617838538
+        ],
+        [
+          20.679931640625,
+          23.96616617838538
+        ],
+        [
+          35.41544596354174,
+          15.928599039713504
+        ],
+        [
+          58.1884765625,
+          5.211842854817746
+        ],
+        [
+          93.01788330078125,
+          -8.184051513671875
+        ],
+        [
+          106.41387939453125,
+          -12.202809651692746
+        ],
+        [
+          106.41387939453125,
+          -12.202809651692746
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "lastCommittedPoint": [
+        106.41387939453125,
+        -12.202809651692746
+      ]
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
