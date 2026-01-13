@@ -43,5 +43,20 @@ List<int> promptUserForCoins() {
 
 // Returns a total value of coins (in cents), given an ordered list of coin counts
 int getTotal(List<int> changeCounts) {
-  return 0;
+  var total = 0;
+
+  // var dict = {1: 5, 5: 10, 10: 0, 25: 0, 100: 10, 200: 4};
+
+  // for (var key in dict.keys){
+  //   total += key * dict[key]!;
+  // }
+
+  total += changeCounts[0];
+  total += changeCounts[1] * 5;
+  total += changeCounts[2] * 10;
+  total += changeCounts[3] * 25;
+  total += changeCounts[4] * 100;
+  total += changeCounts[5] * 200;
+
+  return total;
 }
