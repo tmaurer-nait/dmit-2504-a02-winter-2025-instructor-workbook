@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:profile_example/widgets/profile_picture.dart';
 
 void main() {
   runApp(const MainApp());
@@ -20,34 +21,12 @@ class MainApp extends StatelessWidget {
                 'Employee Profile',
                 style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
               ),
-              ClipOval(
-                child: Image(
-                  semanticLabel: "Picture of Sulley",
-                  image: AssetImage('assets/images/sulley_profile.jpg'),
-                  height: 250,
-                  width: 250,
-                ),
-              ),
-              Text(
-                'James P Sullivan (Sulley)',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-              ),
+              ProfilePicture(),
               Padding(
                 padding: EdgeInsets.all(16),
                 child: Column(
                   children: [
-                    Row(
-                      children: [
-                        Text(
-                          'Role: ',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text('Scarer', style: TextStyle(fontSize: 20)),
-                      ],
-                    ),
+                    ProfileInfo(),
                     Row(
                       children: [
                         Text(
