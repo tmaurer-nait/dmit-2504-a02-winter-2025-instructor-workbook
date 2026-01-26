@@ -15,7 +15,11 @@ class ProfilePage extends StatelessWidget {
           children: [
             Text(
               'Employee Profile',
-              style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 36,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'BitCountProp',
+              ),
             ),
             ProfilePicture(),
             Padding(

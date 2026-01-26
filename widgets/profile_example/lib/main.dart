@@ -10,6 +10,22 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: ProfilePage());
+    final lightTheme = ThemeData(
+      colorScheme: ColorScheme.fromSwatch(
+        primarySwatch: Colors.green,
+        cardColor: const Color.fromARGB(255, 200, 229, 233),
+      ),
+      fontFamily: 'BitCountProp',
+    );
+    final darkTheme = lightTheme.copyWith(
+      colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.amber),
+    );
+
+    return MaterialApp(
+      home: ProfilePage(),
+      theme: lightTheme,
+      darkTheme: darkTheme,
+      themeMode: ThemeMode.light,
+    );
   }
 }

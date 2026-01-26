@@ -7,17 +7,26 @@ class ProfilePicture extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ClipOval(
-          child: Image(
-            semanticLabel: "Picture of Sulley",
-            image: AssetImage('assets/images/sulley_profile.jpg'),
-            height: 250,
-            width: 250,
+        Container(
+          height: 250,
+          width: 250,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: Colors.blue,
+            image: DecorationImage(
+              image: AssetImage(('assets/images/sulley_profile.jpg')),
+              fit: BoxFit.cover,
+            ),
+            border: Border.all(width: 4, color: Colors.purple),
           ),
         ),
         Text(
           'James P Sullivan (Sulley)',
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontSize: 24,
+            fontStyle: FontStyle.italic,
+            color: Theme.of(context).primaryColor,
+          ),
         ),
       ],
     );

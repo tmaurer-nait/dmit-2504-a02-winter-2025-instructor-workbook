@@ -12,7 +12,12 @@ class ProfileInfo extends StatelessWidget {
       children: [
         Text(
           '$label: ',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.teal,
+            backgroundColor: Colors.yellow,
+          ),
         ),
         Text(value, style: TextStyle(fontSize: 20)),
       ],
