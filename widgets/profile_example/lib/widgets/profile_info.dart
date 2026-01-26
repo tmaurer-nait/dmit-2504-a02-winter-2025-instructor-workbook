@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 
 class ProfileInfo extends StatelessWidget {
-  const ProfileInfo({super.key});
+  final String label;
+  final String value;
+
+  const ProfileInfo({super.key, required this.label, required this.value});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          'Role: ',
+          '$label: ',
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
-        Text('Scarer', style: TextStyle(fontSize: 20)),
+        Text(value, style: TextStyle(fontSize: 20)),
       ],
     );
   }
