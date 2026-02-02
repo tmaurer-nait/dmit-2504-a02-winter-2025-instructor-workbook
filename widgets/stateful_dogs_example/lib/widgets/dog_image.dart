@@ -12,7 +12,10 @@ class DogImage extends StatefulWidget {
 }
 
 class _DogImageState extends State<DogImage> {
+  // Stateful variables
   var _dogImageUrl = '';
+  var _likes = 0;
+  var _dislikes = 0;
 
   // Helper function to get a dog image URL - should be moved to API file
   Future<String> getRandomDogImage() async {
@@ -27,6 +30,7 @@ class _DogImageState extends State<DogImage> {
   }
 
   void loadDogImage() {
+    // empty url to force circular progress indicator
     setState(() {
       _dogImageUrl = '';
     });
@@ -54,6 +58,19 @@ class _DogImageState extends State<DogImage> {
         _dogImageUrl == ''
             ? CircularProgressIndicator()
             : Image.network(_dogImageUrl, height: 600),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Text(
+              'Likes: $_likes',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'Dislikes: $_dislikes',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
         ElevatedButton(
           onPressed: () {
             loadDogImage();
