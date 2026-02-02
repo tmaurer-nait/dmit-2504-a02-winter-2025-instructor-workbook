@@ -63,7 +63,35 @@ class _DogImageState extends State<DogImage> {
             height: 600,
             child: Center(child: CircularProgressIndicator()),
           )
-        : Image.network(_dogImageUrl, height: 600, fit: BoxFit.cover);
+        : GestureDetector(
+            onDoubleTap: () {
+              setState(() {
+                _likes++;
+              });
+              loadDogImage();
+            },
+            onLongPress: () {
+              setState(() {
+                _dislikes++;
+              });
+              loadDogImage();
+            },
+            onHorizontalDragEnd: (details) {
+              if (details.primaryVelocity != null &&
+                  details.primaryVelocity! > 0) {
+                setState(() {
+                  _likes++;
+                });
+                loadDogImage();
+              } else {
+                setState(() {
+                  _dislikes++;
+                });
+                loadDogImage();
+              }
+            },
+            child: Image.network(_dogImageUrl, height: 600, fit: BoxFit.cover),
+          );
   }
 
   @override
