@@ -36,6 +36,10 @@ class _DogImageState extends State<DogImage> {
     });
     // fetches a new dog image url
     getRandomDogImage().then((newImageUrl) {
+      // Do a mounted check because we are setting state in
+      // response to async call
+      if (!mounted) return;
+
       // Calls set state to trigger a redraw
       setState(() {
         // Updates the state variable
@@ -51,13 +55,22 @@ class _DogImageState extends State<DogImage> {
     loadDogImage();
   }
 
+  // Helper method that is used to clean up the build method by extracting
+  // some of the code to here
+  Widget _buildImage() {
+    return _dogImageUrl == ''
+        ? SizedBox(
+            height: 600,
+            child: Center(child: CircularProgressIndicator()),
+          )
+        : Image.network(_dogImageUrl, height: 600, fit: BoxFit.cover);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        _dogImageUrl == ''
-            ? CircularProgressIndicator()
-            : Image.network(_dogImageUrl, height: 600),
+        _buildImage(),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -73,9 +86,21 @@ class _DogImageState extends State<DogImage> {
         ),
         ElevatedButton(
           onPressed: () {
+            setState(() {
+              _likes++;
+            });
             loadDogImage();
           },
-          child: Text('Fetch a New Dog'),
+          child: Text('Like'),
+        ),
+        ElevatedButton(
+          onPressed: () {
+            setState(() {
+              _dislikes++;
+            });
+            loadDogImage();
+          },
+          child: Text('Dislike'),
         ),
       ],
     );
