@@ -76,6 +76,98 @@
       "originalText": "Notes:\nI am doing all of this in the MAIN\nThat is bad - don't do that",
       "autoResize": true,
       "lineHeight": 1.25
+    },
+    {
+      "id": "GP3Cpyquh7l2viFgFKFjV",
+      "type": "freedraw",
+      "x": 410.6696101478914,
+      "y": 202.83708192952275,
+      "width": 81.74041423573658,
+      "height": 78.07201692603996,
+      "angle": 0,
+      "strokeColor": "#2f9e44",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a3",
+      "roundness": null,
+      "seed": 749884341,
+      "version": 15,
+      "versionNonce": 652651131,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1770158295789,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0.2984023274308356,
+          0.41247799533502416
+        ],
+        [
+          1.4217251024041957,
+          2.097488815140764
+        ],
+        [
+          1.9833953756727851,
+          4.905840181483654
+        ],
+        [
+          2.5450656489413177,
+          5.467510454752215
+        ],
+        [
+          3.106735922209964,
+          5.467510454752215
+        ],
+        [
+          5.915087288552854,
+          1.5358185418721746
+        ],
+        [
+          14.34012361601765,
+          -10.820891926908928
+        ],
+        [
+          22.76515994348256,
+          -20.93093907417952
+        ],
+        [
+          38.491892051875084,
+          -37.78101172910925
+        ],
+        [
+          58.150316073147735,
+          -55.192763543089455
+        ],
+        [
+          69.38370376695548,
+          -63.61779987055431
+        ],
+        [
+          81.74041423573658,
+          -72.60450647128775
+        ],
+        [
+          81.74041423573658,
+          -72.60450647128775
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "lastCommittedPoint": [
+        81.74041423573658,
+        -72.60450647128775
+      ]
     }
   ],
   "appState": {
