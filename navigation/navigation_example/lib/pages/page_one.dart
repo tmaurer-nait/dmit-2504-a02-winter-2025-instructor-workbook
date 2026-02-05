@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_example/pages/page_two.dart';
+import 'package:navigation_example/constants/routes.dart' as routes;
 
 class PageOne extends StatefulWidget {
   const PageOne({super.key});
@@ -9,6 +9,9 @@ class PageOne extends StatefulWidget {
 }
 
 class _PageOneState extends State<PageOne> {
+  // Use this to display the return value from page two
+  var data = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,17 +21,24 @@ class _PageOneState extends State<PageOne> {
           children: [
             Text('PAGE ONE'),
             ElevatedButton(
-              onPressed: () {
+              // We made this async so we can "listen" for a response from page two
+              // Navigator.push() resolves when the page it pushes is popped from the stack
+              onPressed: () async {
                 // When I press this button I want to go to page two
                 // I'll start with the material page route manual push
                 // (though it's better to use pushNamed with centralized routing)
-                Navigator.of(
+                final returnValue = await Navigator.of(
                   context,
-                ).push(MaterialPageRoute(builder: (context) => PageTwo()));
+                ).pushNamed(routes.pageTwoRoute);
+                setState(() {
+                  // We use this null check in case the user presses the back button (no data)
+                  // instead of our custom back button that actually returns data
+                  data = returnValue != null ? returnValue as String : '';
+                });
               },
               child: Text('Go To Page Two'),
             ),
-            Text('DATA FROM PAGE TWO GOES HERE'),
+            data.isEmpty ? Text('Awaiting Response...') : Text(data),
           ],
         ),
       ),
