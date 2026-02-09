@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nested_nav/pages/home_page.dart';
+import 'package:nested_nav/pages/settings_manager.dart';
 
 void main() {
   runApp(const MainApp());
@@ -21,11 +22,19 @@ class MainApp extends StatelessWidget {
 
         // switching on settings.name allows us to check the route name
         switch (settings.name) {
+          // Home page by default
           case '/':
             page = HomePage();
 
             break;
+
+          // This case matches any settings.name that starts with settings
+          // This allows us to route to /settings/home, or /settings/option-1 etc.
+          case String name when name.startsWith('/settings'):
+            page = SettingsManager(initialRoute: settings.name!.substring(9));
+            break;
           default:
+            throw Exception('Unknown Route: ${settings.name}');
         }
 
         // At the end return the selected page in a route

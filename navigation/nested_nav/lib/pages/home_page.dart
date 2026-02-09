@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
       // A button that hovers in the bottom right at all times
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // TODO: Route to settings
+          Navigator.of(context).pushNamed('/settings/');
         },
         child: Icon(Icons.settings),
       ),

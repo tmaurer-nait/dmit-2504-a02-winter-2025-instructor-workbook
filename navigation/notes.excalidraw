@@ -8505,8 +8505,8 @@
     {
       "id": "a5fpxwM0h_tvUM1KZRxr7",
       "type": "rectangle",
-      "x": -489.5518025657277,
-      "y": 3074.0019660552807,
+      "x": -495.7909383079152,
+      "y": 3073.7457709869213,
       "width": 298.71435165405273,
       "height": 61.327152252197266,
       "angle": 0,
@@ -8524,8 +8524,8 @@
         "type": 3
       },
       "seed": 790838604,
-      "version": 209,
-      "versionNonce": 18108916,
+      "version": 294,
+      "versionNonce": 1967396980,
       "isDeleted": false,
       "boundElements": [
         {
@@ -8533,15 +8533,15 @@
           "id": "4dJg53fFURpQS_7ctih61"
         }
       ],
-      "updated": 1770658820151,
+      "updated": 1770661456489,
       "link": null,
       "locked": false
     },
     {
       "id": "4dJg53fFURpQS_7ctih61",
       "type": "text",
-      "x": -425.0045556327443,
-      "y": 3092.1655421813794,
+      "x": -431.2436913749318,
+      "y": 3091.90934711302,
       "width": 169.61985778808594,
       "height": 25,
       "angle": 0,
@@ -8557,11 +8557,11 @@
       "index": "b1e",
       "roundness": null,
       "seed": 2095428556,
-      "version": 187,
-      "versionNonce": 109639500,
+      "version": 272,
+      "versionNonce": 1402006004,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1770658820151,
+      "updated": 1770661456489,
       "link": null,
       "locked": false,
       "text": "Settings Manager",
@@ -8713,8 +8713,8 @@
         "type": 3
       },
       "seed": 1901418828,
-      "version": 545,
-      "versionNonce": 505773260,
+      "version": 636,
+      "versionNonce": 502787660,
       "isDeleted": false,
       "boundElements": [
         {
@@ -8722,7 +8722,7 @@
           "id": "tkpEla__GdXWGuONIRF_t"
         }
       ],
-      "updated": 1770658853247,
+      "updated": 1770661460682,
       "link": null,
       "locked": false
     },
@@ -8746,11 +8746,11 @@
       "index": "b1j",
       "roundness": null,
       "seed": 1786007500,
-      "version": 518,
-      "versionNonce": 1618215756,
+      "version": 609,
+      "versionNonce": 1350429812,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1770658853247,
+      "updated": 1770661460682,
       "link": null,
       "locked": false,
       "text": "Option 1",
