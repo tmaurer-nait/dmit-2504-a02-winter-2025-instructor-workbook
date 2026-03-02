@@ -12,18 +12,60 @@ class TodoPage extends StatefulWidget {
 }
 
 class _TodoPageState extends State<TodoPage> {
-  List<Todo> _todoList = [
-    Todo(description: 'Complete assignment 3', isComplete: true),
-    Todo(description: 'Plan Project Proposal', isComplete: false),
-  ];
+  List<Todo> _todoList = [];
+
+  @override
+  void initState() {
+    super.initState();
+    // When we access this page, copy in the todos from the app state
+    // They'll have already loaded in from firestore
+    setState(() {
+      _todoList = widget.appState.todos;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: ListView.builder(
         itemCount: _todoList.length,
         itemBuilder: (context, index) {
           var todo = _todoList[index];
-          return ListTile(title: Text(todo.description));
+          // Dismissible allows us to swipe away the list items (delete)
+          return Dismissible(
+            key: UniqueKey(),
+            child: ListTile(
+              title: Text(
+                todo.description,
+                style: TextStyle(
+                  decoration: todo.isComplete
+                      ? TextDecoration.lineThrough
+                      : TextDecoration.none,
+                ),
+              ),
+              trailing: Checkbox(
+                value: todo.isComplete,
+                onChanged: (value) {
+                  setState(() {
+                    // Update local statec
+                    todo.isComplete = value!;
+                    // Update backend
+                    widget.appState.updateTodo(todo);
+                  });
+                },
+              ),
+            ),
+            onDismissed: (direction) {
+              // Direction is either left or right (in our case we don't care)
+              setState(() {
+                // Update local state
+                _todoList.removeAt(index);
+                // Update backend
+                widget.appState.deleteTodo(todo);
+              });
+            },
+          );
         },
       ),
     );
