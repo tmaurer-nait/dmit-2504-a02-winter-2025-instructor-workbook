@@ -1,3 +1,4 @@
+import 'package:dmit2504_a02_w2026/pages/todo_page.dart';
 import 'package:dmit2504_a02_w2026/state/app_state.dart';
 import 'package:flutter/material.dart';
 
@@ -71,6 +72,27 @@ class MainApp extends StatelessWidget {
             }),
           ],
         ),
+      },
+      // Priority order for route selection:
+      // 1. home
+      // 2. routes
+      // 3. onGenerateRoute
+      onGenerateRoute: (settings) {
+        if (settings.name == '/todos') {
+          // Protect our todos page route with a simple auth check using our appstate
+          if (applicationState.loggedIn) {
+            return MaterialPageRoute(
+              builder: (context) => TodoPage(appState: applicationState),
+            );
+          } else {
+            // Noone logged in, redirect to home page
+            return MaterialPageRoute(
+              builder: (context) => HomePage(appState: applicationState),
+            );
+          }
+        }
+        // If route does not exist we should show some 404 by default
+        return null;
       },
     );
   }

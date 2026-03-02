@@ -21,6 +21,16 @@ class AppState extends ChangeNotifier {
   var _loggedIn = false;
   bool get loggedIn => _loggedIn;
 
+  // Variable that tracks the currenlty logged in user
+  User? _user;
+  User? get user => _user;
+  set user(User? user) {
+    if (user == null) {
+      throw ArgumentError('User cannot be set to null');
+    }
+    _user = user;
+  }
+
   // Initialize connection to firebase, and configure firebase auth settings
   Future<void> init() async {
     // Connect to firebase before starting the app
@@ -31,8 +41,6 @@ class AppState extends ChangeNotifier {
     // Configure ui auth provider to tell it to allow email auth
     FirebaseUIAuth.configureProviders([EmailAuthProvider()]);
 
-    // TODO: Listen to firebase auth state changes
-
     // Whenever the firebase auth user state changes (user signs in or out)
     // We notify all listeners of that change
     FirebaseAuth.instance.userChanges().listen((user) {
@@ -41,6 +49,8 @@ class AppState extends ChangeNotifier {
         _loggedIn = false;
       } else {
         _loggedIn = true;
+        // Once they log in save the current user in app state
+        this.user = user;
       }
       // Once we've updated our state variables notify any listeners
       // This function is built in to the ChangeNotifier class we extended
