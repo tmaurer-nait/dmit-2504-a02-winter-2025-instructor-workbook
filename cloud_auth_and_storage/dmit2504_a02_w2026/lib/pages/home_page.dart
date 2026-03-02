@@ -19,11 +19,22 @@ class HomePage extends StatelessWidget {
           builder: (context, _) {
             // Check the application state and render the correct button as needed
             return appState.loggedIn
-                ? ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).pushNamed('/profile');
-                    },
-                    child: Text('Profile'),
+                ? Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).pushNamed('/profile');
+                        },
+                        child: Text('Profile'),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).pushNamed('/todos');
+                        },
+                        child: Text('Todos'),
+                      ),
+                    ],
                   )
                 : ElevatedButton(
                     onPressed: () {
