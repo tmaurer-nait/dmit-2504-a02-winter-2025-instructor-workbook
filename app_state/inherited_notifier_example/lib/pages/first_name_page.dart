@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:inherited_notifier_example/state/user_notifier.dart';
 
 import '../models/user.dart';
 
 class FirstNamePage extends StatelessWidget {
-  const FirstNamePage({required this.user, super.key});
-
-  // This references the app state that gets passed in from the home page
-  final User user;
+  const FirstNamePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    User user = UserNotifier.of(context);
     return Scaffold(
       appBar: AppBar(title: const Text('First Name Page')),
       body: Center(
