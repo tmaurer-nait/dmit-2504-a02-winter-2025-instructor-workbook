@@ -1,3 +1,4 @@
+import 'package:animation_example/pages/animation_page.dart';
 import 'package:flutter/material.dart';
 
 // Needed for pi
@@ -34,7 +35,6 @@ class TransformPage extends StatelessWidget {
               offset: Offset(60, -200),
               child: Text('Translate', style: TextStyle(fontSize: 30)),
             ),
-
             // Nested Transform
             // When doing nested transforms be cautious of how they impact each other
             Transform.rotate(
@@ -49,6 +49,12 @@ class TransformPage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.play_arrow),
+        onPressed: () => Navigator.of(
+          context,
+        ).push(MaterialPageRoute(builder: (context) => AnimationPage())),
       ),
     );
   }
