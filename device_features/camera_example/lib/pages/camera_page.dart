@@ -84,7 +84,7 @@ class _CameraPageState extends State<CameraPage> {
           ),
         ],
       ),
-      body: Center(child: Expanded(child: CameraPreview(_cameraController))),
+      body: Center(child: CameraPreview(_cameraController)),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           var file = await _takePicture();
