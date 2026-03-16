@@ -6,12 +6,11 @@ class User {
   late final String email;
 
   // Default Generative Constructor
-  User({required String name, required String email});
+  User({required this.name, required this.email});
 
   // Override toString to display 'Name: <name>, Email: <email>'
   @override
   String toString() {
-    // TODO: implement toString
-    return super.toString();
+    return 'Name: $name, Email: $email';
   }
 }
